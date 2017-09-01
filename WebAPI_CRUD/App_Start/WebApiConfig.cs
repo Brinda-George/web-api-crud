@@ -19,6 +19,7 @@ namespace WebAPI_CRUD
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Formatters.Remove(config.Formatters.JsonFormatter);
         }
     }
 }
